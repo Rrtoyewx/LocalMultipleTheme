@@ -1,9 +1,11 @@
-package com.idreamo.rrtoyewx.localmultipletheme;
+package com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs;
 
 import android.app.Activity;
 import android.content.res.Resources;
 import android.graphics.drawable.Drawable;
 import android.view.View;
+
+import com.idreamo.rrtoyewx.multiplethemelibrary.MultipleThemeUtils;
 
 /**
  * Created by Rrtoyewx on 16/2/29.

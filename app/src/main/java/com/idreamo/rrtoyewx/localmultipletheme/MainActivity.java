@@ -7,6 +7,12 @@ import android.view.View;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
+import com.idreamo.rrtoyewx.multiplethemelibrary.MultipleTheme;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.ColorAttr;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.DrawAttr;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.TextColorAttr;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.TextSizeAttr;
+
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
     private RelativeLayout relativeLayout;

@@ -1,4 +1,4 @@
-package com.idreamo.rrtoyewx.localmultipletheme;
+package com.idreamo.rrtoyewx.multiplethemelibrary;
 
 import android.content.Context;
 import android.content.res.Resources;

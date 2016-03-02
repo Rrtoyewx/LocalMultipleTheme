@@ -1,9 +1,12 @@
-package com.idreamo.rrtoyewx.localmultipletheme;
+package com.idreamo.rrtoyewx.multiplethemelibrary.multipleitems;
 
 import android.content.res.Resources;
 import android.util.Log;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.idreamo.rrtoyewx.multiplethemelibrary.MultipleTheme;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.MultipleChangeAttr;
 
 /**
  * Created by Rrtoyewx on 16/2/28.
@@ -25,11 +28,11 @@ public class MultipleViewGroup extends MultipleItem {
      * @return true dispatch sub view ,false   just dispatch viewGroup
      */
     @Override
-    boolean dispatchChangeThemeEvent(int newTheme) {
+    public boolean dispatchChangeThemeEvent(int newTheme) {
         for (MultipleChangeAttr attrs : mMultipleChangeAttrs) {
             attrs.changeTheme(newTheme);
         }
-        Log.e("TAG","MultipleViewGroup");
+        Log.e("TAG", "MultipleViewGroup");
         if (mIsDispacthChildView) {
             ViewGroup targetViewGroup = (ViewGroup) mTargetView;
             for (int i = 0; i < targetViewGroup.getChildCount(); i++) {

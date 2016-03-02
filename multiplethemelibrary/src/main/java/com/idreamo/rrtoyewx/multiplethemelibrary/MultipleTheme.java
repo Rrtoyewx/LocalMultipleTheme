@@ -1,8 +1,13 @@
-package com.idreamo.rrtoyewx.localmultipletheme;
+package com.idreamo.rrtoyewx.multiplethemelibrary;
 
 import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.MultipleChangeAttr;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleitems.MultipleItem;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleitems.MultipleView;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleitems.MultipleViewGroup;
 
 import java.util.HashSet;
 import java.util.Set;

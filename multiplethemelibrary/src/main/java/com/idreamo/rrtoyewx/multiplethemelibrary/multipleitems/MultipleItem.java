@@ -1,8 +1,8 @@
-package com.idreamo.rrtoyewx.localmultipletheme;
+package com.idreamo.rrtoyewx.multiplethemelibrary.multipleitems;
 
-import android.content.res.Resources;
-import android.provider.Settings;
 import android.view.View;
+
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.MultipleChangeAttr;
 
 /**
  * Created by Rrtoyewx on 16/2/28.
@@ -18,7 +18,7 @@ public abstract class MultipleItem {
         mMultipleChangeAttrs = attrs;
     }
 
-    abstract boolean dispatchChangeThemeEvent(int themeId);
+    public abstract boolean dispatchChangeThemeEvent(int themeId);
 
 
     public View getTargetView() {

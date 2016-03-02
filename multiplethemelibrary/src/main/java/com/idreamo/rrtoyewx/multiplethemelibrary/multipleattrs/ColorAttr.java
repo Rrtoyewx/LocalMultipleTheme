@@ -1,17 +1,19 @@
-package com.idreamo.rrtoyewx.localmultipletheme;
+package com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs;
 
 import android.app.Activity;
 import android.content.res.Resources;
+import android.util.Log;
 import android.view.View;
-import android.widget.TextView;
+
+import com.idreamo.rrtoyewx.multiplethemelibrary.MultipleThemeUtils;
 
 /**
  * Created by Rrtoyewx on 16/2/29.
  */
-public class TextColorAttr extends MultipleChangeAttr {
+public class ColorAttr extends MultipleChangeAttr {
 
 
-    public TextColorAttr(View targetView, int attrResId, Activity activity) {
+    public ColorAttr(View targetView, int attrResId, Activity activity) {
         super(targetView, attrResId, activity);
     }
 
@@ -19,6 +21,8 @@ public class TextColorAttr extends MultipleChangeAttr {
     public void changeTheme(int newTheme) {
         Resources.Theme theme = mActivity.getTheme();
         int color = MultipleThemeUtils.getColorByTheme(theme, mAttrsResId);
-        ((TextView) mTargetView).setTextColor(color);
+        mTargetView.setBackgroundColor(color);
     }
+
+
 }
