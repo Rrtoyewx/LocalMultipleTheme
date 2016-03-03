@@ -1,22 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:id="@+id/rl"
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rl"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="?attr/background_drawable"
+    android:background="?attr/background_color"
     tools:context="com.idreamo.rrtoyewx.localmultipletheme.MainActivity">
 
+
+    <ImageView
+        android:id="@+id/iv_show"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_margin="10dp"
+        android:background="?attr/image_backgroud" />
+
     <TextView
-        android:id="@+id/tv"
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llayout_mode_pannel"
+        android:layout_below="@+id/iv_show"
+        android:padding="10dp"
+        android:text="@string/content"
+        android:textColor="?attr/text_color"
+        android:textSize="?attr/text_size" />
+
+    <LinearLayout
+        android:id="@+id/llayout_mode_pannel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:textSize="?attr/text_size"
-        android:background="?attr/background_color"
-        android:text="Hello World!"
-        android:textColor="?attr/text_color" />
+        android:layout_alignParentBottom="true"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/btn_day_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/day_mode" />
+
+        <Button
+            android:id="@+id/btn_night_mode"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/night_mode" />
+    </LinearLayout>
 
 
 </RelativeLayout>
