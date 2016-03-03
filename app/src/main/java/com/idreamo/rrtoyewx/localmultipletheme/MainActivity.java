@@ -12,6 +12,7 @@ import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.ColorAttr;
 import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.DrawAttr;
 import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.TextColorAttr;
 import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.TextSizeAttr;
+import com.idreamo.rrtoyewx.multiplethemelibrary.multipleitems.MultipleItem;
 
 public class MainActivity extends AppCompatActivity {
     private TextView textView;
@@ -25,21 +26,23 @@ public class MainActivity extends AppCompatActivity {
 
         textView = (TextView) findViewById(R.id.tv);
         relativeLayout = (RelativeLayout) findViewById(R.id.rl);
-        float textSize = textView.getTextSize();
-        Log.e("TAG", textSize + "textSize");
 
 
-        ColorAttr backgroudAttr = new ColorAttr(textView, R.attr.background_color, this);
-        TextColorAttr textColorAttr = new TextColorAttr(textView, R.attr.text_color, this);
-        TextSizeAttr textSizeAttr = new TextSizeAttr(textView, R.attr.text_size, this);
-
+//        ColorAttr backgroudAttr = new ColorAttr(textView, R.attr.background_color, this);
+//        TextColorAttr textColorAttr = new TextColorAttr(textView, R.attr.text_color, this);
+//        TextSizeAttr textSizeAttr = new TextSizeAttr(textView, R.attr.text_size, this);
+        MultipleItem multipleItem = new MultipleItem.MultipleItemBuilder().setTargetView(textView)
+                .addAttrs(new TextColorAttr(textView, R.attr.text_color, this))
+                .addAttrs(new ColorAttr(textView, R.attr.background_color, this))
+                .addAttrs(new TextSizeAttr(textView, R.attr.text_size, this))
+                .create();
 
 
         DrawAttr backgroudAttr1 = new DrawAttr(relativeLayout, R.attr.background_drawable, this);
 
 
         MultipleTheme.newSingleInstance()
-                .addMultipleItem(textView, textColorAttr, backgroudAttr, textSizeAttr)
+                .addMultipleItem(multipleItem)
                 .addMultipleItem(relativeLayout, true, backgroudAttr1);
 
 

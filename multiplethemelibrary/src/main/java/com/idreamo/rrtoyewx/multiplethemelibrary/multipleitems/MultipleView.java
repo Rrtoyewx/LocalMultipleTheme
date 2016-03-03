@@ -1,7 +1,5 @@
 package com.idreamo.rrtoyewx.multiplethemelibrary.multipleitems;
 
-import android.content.res.Resources;
-import android.util.Log;
 import android.view.View;
 
 import com.idreamo.rrtoyewx.multiplethemelibrary.multipleattrs.MultipleChangeAttr;

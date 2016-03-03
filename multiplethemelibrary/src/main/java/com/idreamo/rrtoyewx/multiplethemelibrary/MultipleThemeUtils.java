@@ -3,9 +3,7 @@ package com.idreamo.rrtoyewx.multiplethemelibrary;
 import android.content.Context;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
-import android.graphics.Color;
 import android.graphics.drawable.Drawable;
-import android.util.Log;
 import android.util.TypedValue;
 
 /**
@@ -28,12 +26,12 @@ public class MultipleThemeUtils {
     }
 
 
-    public static float getSizeByTheme(Resources.Theme newTheme, int attrsResId,Context context) {
+    public static float getSizeByTheme(Resources.Theme newTheme, int attrsResId, Context context) {
         TypedArray ta = newTheme.obtainStyledAttributes(new int[]{attrsResId});
         float dimension = ta.getDimensionPixelSize(0, -1);
 
         if (dimension != -1) {
-             return px2sp(context,dimension);
+            return px2sp(context, dimension);
         }
         return dimension;
     }
@@ -58,6 +56,4 @@ public class MultipleThemeUtils {
         final float scale = context.getResources().getDisplayMetrics().density;
         return (int) (pxValue / scale + 0.5f);
     }
-
-
 }

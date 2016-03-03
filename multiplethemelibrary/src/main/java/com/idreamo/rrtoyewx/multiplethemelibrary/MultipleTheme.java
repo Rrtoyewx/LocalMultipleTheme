@@ -1,6 +1,5 @@
 package com.idreamo.rrtoyewx.multiplethemelibrary;
 
-import android.app.Activity;
 import android.view.View;
 import android.view.ViewGroup;
 
@@ -45,6 +44,11 @@ public class MultipleTheme {
         return mInstance;
     }
 
+
+    public MultipleTheme addMultipleItem(MultipleItem item) {
+        mMultipleItems.add(item);
+        return this;
+    }
 
 
     public MultipleTheme addMultipleItem(ViewGroup targetView, boolean isDispatchChild, MultipleChangeAttr... attrs) {
@@ -118,34 +122,4 @@ public class MultipleTheme {
             item.setDispatchChangeThemeEvent(false);
         }
     }
-
-
-
-
-
-//    /**
-//     * 针对一个view 有许多的属性需要修改
-//     */
-//    public static class Builder {
-//        private View mTargetView;
-//        private Activity mActivity;
-//        private MultipleItem mMultipleItem;
-//
-//
-//        public Builder(View targetView, Activity activity) {
-//            mTargetView = targetView;
-//            mActivity = activity;
-//
-//        }
-//
-//        public Builder addMultipleChangeAttr(int attrResId) {
-//
-//        }
-//
-//        public void addMultipleChangeAttr() {
-//
-//        }
-//
-//    }
-
 }
